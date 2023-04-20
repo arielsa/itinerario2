@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -95,6 +96,13 @@ namespace itinerario2
             }
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            a1 = null;
+            a2 = null;
+            GC.Collect();
+        }
+
         private void button6_Click(object sender, EventArgs e)
         {
             try
@@ -163,6 +171,16 @@ namespace itinerario2
 
 
 
+        #endregion
+
+        #region destructor
+        ~Alumno()
+        {
+            MessageBox.Show
+                (
+                $" se borro {Nombre}"
+                );
+        }
         #endregion
     }
 }
