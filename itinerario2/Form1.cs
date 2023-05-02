@@ -114,7 +114,7 @@ namespace itinerario2
                         (
                         int.Parse(l),
                         Interaction.InputBox("nombre: "),
-                        Interaction.InputBox("apellido: ")
+                        Interaction.InputBox("apellido:")
                         );
                 }
                 else { throw new Exception("no es num."); }
